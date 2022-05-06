@@ -4,17 +4,17 @@ jobs:
     docker:
       - image: byrnedo/alpine-curl
     environment:
-      product: Risky Repo
-      subProduct: Risky subpro
+      product: AMCT  QA R-74
+      subProduct: Github PL
       environment: Staging
-      token: 82106b5b-fd31-4729-9c22-0fadc316fa98
+      token: c7fa50aa-bdc5-44d3-8bd6-93d88224b8b9
       buildTool: CIRCLE_CI
       buildNumber: "<< pipeline.number >>"
     steps:
       - run:
           name: "Armorcode Validate"
           command: |
-              wget https://dev.armorcode.ai/static/scripts/slastatus.sh
+              wget https://qa.armorcode.ai/static/scripts/slastatus.sh
               sh slastatus.sh
 workflows:
   armorcode-validation-workflow:
