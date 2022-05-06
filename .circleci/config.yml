@@ -7,7 +7,7 @@ jobs:
       product: Risky Repo
       subProduct: Risky subpro
       environment: Staging
-      token: 82106b5b-fd31-4729-9c22-0fadc316fa98
+      token: 82106b5b-fd31-4729-9c22-0fadc316f
       buildTool: CIRCLE_CI
       buildNumber: "<< pipeline.number >>"
     steps:
