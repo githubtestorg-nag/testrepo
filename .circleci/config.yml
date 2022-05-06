@@ -7,7 +7,7 @@ jobs:
       product: AMCT  QA R-74
       subProduct: Github PL
       environment: Staging
-      token: c7fa50aa-bdc5-44d3-8bd6-93d88224b8b9
+      token: $AMC_TOKEN1
       buildTool: CIRCLE_CI
       buildNumber: "<< pipeline.number >>"
     steps:
