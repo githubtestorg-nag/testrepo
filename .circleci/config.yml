@@ -1,9 +1,5 @@
 version: 2.1
-workflows:
-  test-env-vars:
-    jobs:
-      - build:
-          context: my-context
+
 jobs:
   armorcode-validate:
     docker:
@@ -25,4 +21,6 @@ workflows:
   armorcode-validation-workflow:
     jobs:
       - armorcode-validate
+      - build:
+          context: my-context
 
