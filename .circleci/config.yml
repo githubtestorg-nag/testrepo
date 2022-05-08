@@ -20,3 +20,4 @@ workflows:
   armorcode-validation-workflow:
     jobs:
       - armorcode-validate
+
