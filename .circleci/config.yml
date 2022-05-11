@@ -7,13 +7,14 @@ jobs:
       product: test-o
       subProduct: test-sub-1
       environment: Staging
-      token: fb5b3e66-ee6d-4af1-b70c-8a3236ad51cf
+      token: $AMC_TOKEN
       buildTool: CIRCLE_CI
       buildNumber: "<< pipeline.number >>"
     steps:
       - run:
           name: "Armorcode Validate"
           command: |
+              echo $AMC_TOKEN
               wget https://dev.armorcode.ai/static/scripts/slastatus.sh
               sh slastatus.sh
 workflows:
