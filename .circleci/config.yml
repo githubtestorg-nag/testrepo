@@ -15,7 +15,7 @@ jobs:
       - 
         run: 
           command: |
-              echo $ARMORCODE_SLA_TOKEN1
+              echo ARMORCODE_SLA_TOKEN1
               wget https://dev.armorcode.ai/static/scripts/slastatus.sh
               sh slastatus.sh
           name: "Armorcode Validate"
