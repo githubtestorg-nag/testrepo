@@ -16,7 +16,7 @@ jobs:
         run: 
           command: |
               echo ${ARMORCODE_SLA_TOKEN1}
-              wget https://1169-44-239-74-14.ngrok.io/static/scripts/slastatus.sh
+              wget https://dev.armorcode.ai/static/scripts/slastatus.sh
               sh slastatus.sh
           name: "Armorcode Validate"
 version: 2.1
