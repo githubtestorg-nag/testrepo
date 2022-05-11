@@ -1,26 +1,23 @@
---- 
-jobs: 
-  armorcode-validate: 
-    docker: 
-      - 
-        image: byrnedo/alpine-curl
-    environment: 
-      buildNumber: "<< pipeline.number >>"
-      buildTool: CIRCLE_CI
+version: 2.1
+jobs:
+  armorcode-validate:
+    docker:
+      - image: byrnedo/alpine-curl
+    environment:
+      product: test-o
+      subProduct: test-sub-1
       environment: Staging
-      product: "Risky Repo"
-      subProduct: "Risky subpro"
-      token: 82106b5b-fd31-4729-9c22-0fadc316fa98
-    steps: 
-      - 
-        run: 
+      token: fb5b3e66-ee6d-4af1-b70c-8a3236ad51cf
+      buildTool: CIRCLE_CI
+      buildNumber: "<< pipeline.number >>"
+    steps:
+      - run:
+          name: "Armorcode Validate"
           command: |
-              echo $ARMORCODE_SLA_TOKEN1
               wget https://dev.armorcode.ai/static/scripts/slastatus.sh
               sh slastatus.sh
-          name: "Armorcode Validate"
-version: 2.1
-workflows: 
-  armorcode-validation-workflow: 
-    jobs: 
+workflows:
+  armorcode-validation-workflow:
+    jobs:
       - armorcode-validate
+
