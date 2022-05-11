@@ -8,7 +8,7 @@ jobs:
       product: AMCT  QA R-74
       subProduct: Github PL
       environment: Staging
-      token: "$ARMORCODE_SLA_TOKEN"
+      token: '"$ARMORCODE_SLA_TOKEN"'
       buildTool: CIRCLE_CI
       buildNumber: "<< pipeline.number >>"
     steps:
