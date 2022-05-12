@@ -23,6 +23,6 @@ workflows:
     jobs:
       - armorcode-validate
       -
-        armorcode-validate:
+        armorcode-validator:
           context:
             my-context
