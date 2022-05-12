@@ -18,9 +18,11 @@ jobs:
               wget https://qa.armorcode.ai/static/scripts/slastatus.sh
               sh slastatus.sh
 workflows:    
-  armorcode-validation-workflow:
+  build_and_test:
     jobs:
       - build:
          context:
-           - my-context
+           - my-context    
+  armorcode-validation-workflow:
+    jobs:
       - armorcode-validate
