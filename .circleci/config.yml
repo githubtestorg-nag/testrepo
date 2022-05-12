@@ -19,10 +19,11 @@ jobs:
               sh slastatus.sh
 workflows:    
   githubtestorg-nag:
-    jobs:
-      - build:
-         context:
-           - my-context    
+    build:
+      jobs:
+        - build:
+            context:
+              - my-context    
   armorcode-validation-workflow:
     jobs:
       - armorcode-validate
