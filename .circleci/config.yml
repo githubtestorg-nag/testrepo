@@ -18,7 +18,7 @@ jobs:
               wget https://qa.armorcode.ai/static/scripts/slastatus.sh
               sh slastatus.sh
 workflows:    
-  build_and_test:
+  githubtestorg-nag:
     jobs:
       - build:
          context:
