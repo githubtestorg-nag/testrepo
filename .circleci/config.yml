@@ -15,12 +15,13 @@ jobs:
           name: "Armorcode Validate"
           echo: $ARMORCODE_SLA_TOKEN
           command: |
-              token= $ARMORCODE_SLA_TOKEN
+              token=$ARMORCODE_SLA_TOKEN
               wget https://qa.armorcode.ai/static/scripts/slastatus.sh
               sh slastatus.sh
 workflows:    
   armorcode-validation-workflow:
     jobs:
-      - armorcode-validate:
+      - 
+        armorcode-validate:
           context:
             - my-context
