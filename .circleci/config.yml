@@ -4,8 +4,8 @@ jobs:
     docker:
       - image: byrnedo/alpine-curl
     environment:
-      product: AMCT QA R-77
-      subProduct: Github 101
+      product: AMCT  QA R-74
+      subProduct: Github PL
       environment: Staging
       token: $ARMORCODE_SLA_TOKEN
       buildTool: CIRCLE_CI
@@ -13,12 +13,11 @@ jobs:
     steps:
       - run:
           name: "Armorcode Validate"
-          echo: $ARMORCODE_SLA_TOKEN
           command: |
-              token=$ARMORCODE_SLA_TOKEN
-              wget https://qa.armorcode.ai/static/scripts/slastatus.sh
+             token=$ARMORCODE_SLA_TOKEN
+             wget https://qa.armorcode.ai/static/scripts/slastatus.sh
               sh slastatus.sh
-workflows:    
+workflows:
   armorcode-validation-workflow:
     jobs:
       - armorcode-validate
