@@ -5,7 +5,7 @@ jobs:
       - image: byrnedo/alpine-curl
     environment:
       product: AMCT QA R-77
-      subProduct: Github 101
+      subProduct: Github PC
       environment: Staging
       token: $ARMORCODE_SLA_TOKEN
       buildTool: CIRCLE_CI
